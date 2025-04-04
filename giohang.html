@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <title>Venus Palace</title>
+    <link rel="stylesheet" href="CSS/header_footer.CSS">
+</head>
+
+<body>  
+    <header class="header">
+        <div class="container">
+            <a href="trangchu.html" class="logo"><img src="Images/Logo/Logo.png" alt="Venus Palace"></a>
+            <nav class="nav">
+                <a href="trangchu.html">TRANG CHỦ</a>
+                <a href="gioithieu.html">GIỚI THIỆU</a>
+                <a href="sanpham.html">SẢN PHẨM</a>
+                <a href="giohang.html">GIỎ HÀNG</a>
+                <a href="dangky.html">ĐĂNG KÝ</a>
+                <a href="dangnhap.html">ĐĂNG NHẬP</a>
+                <a href="lienhe.html">LIÊN HỆ</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><img src="Images/Icon/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/Icon/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/Icon/tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="Images/Icon/messenger.png" alt="Messenger"></a>
+            </div>
+        </div>
+    </header>
+    <div id="cart-container">
+        <button class="close-btn" onclick="toggleCart()">X</button>
+        <h3>Giỏ hàng</h3>
+        <ul id="cart-items"></ul>
+        <p><strong>Tổng tiền: </strong><span id="total-price">0</span>đ</p>
+        <button class="close-cart" onclick="toggleCart()">Thêm vào giỏ hàng</button>
+    </div>
+    <h1 class="menu">Chào mừng bạn đến với Menu của chúng tôi</h1>
+    <div class="container-main">
+        <div class="product">
+            <img src="Images/Menu/1.png" alt="Menu 1">
+            <div class="product-info">
+                <h3>Gói simple</h3>
+                <p>Đơn giản và tinh tế.</p>
+                <p class="price">Gía: 2.600.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Gói simple', 2600000, 'Images/Menu/1.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Images/Menu/2.png" alt="menu 2">
+            <div class="product-info">
+                <h3>Gói tiệc hồng phúc</h3>
+                <p>Đậm đà hương vị Việt.</p>
+                <p class="price">Gía: 3.000.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Gói tiệc hồng phúc', 3000000, 'Images/Menu/2.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div><div class="product">
+            <img src="Images/Menu/3.png" alt="menu 3">
+            <div class="product-info">
+                <h3>Thực đơn hoàng gia</h3>
+                <p>Sang trọng,đẳng cấp.</p>
+                <p class="price">Gía: 3.600.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Thực đơn hoàng gia', 3600000, 'Images/Menu/3.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Images/Menu/4.png" alt="menu 4">
+            <div class="product-info">
+                <h3>Gói ngọc trai</h3>
+                <p>Tinh tế và cao cấp.</p>
+                <p class="price">Gía: 4.000.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Gói ngọc trai', 4000000, 'Images/Menu/4.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Images/Menu/5.png" alt="menu 5">
+            <div class="product-info">
+                <h3>Gói đặc biệt</h3>
+                <p>Hiện đại lãng mạn.</p>
+                <p class="price">Gía: 4.400.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Gói đặc biệt', 4400000, 'Images/Menu/5.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="Images/Menu/6.png" alt="menu 6">
+            <div class="product-info">
+                <h3>Gói kim cương</h3>
+                <p>Xa hoa thượng hạng.</p>
+                <p class="price">Gía: 5.000.000VNĐ</p>
+                <button class="buy-btn" onclick="addToCart('Gói kim cương', 5000000, 'Images/Menu/6.png')">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+            <main class="contact-main">
+                <h1 class="h1">Xác nhận giỏ hàng của bạn</h1>
+                    
+                <form class="contact-form">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn.">
+        
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn.">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Nhập email của bạn.">
+        
+                    <label for="sl">Chọn loại tiệc:</label>  
+                    <select id="package" name="package" required>
+                        <option value="0">---Loại tiệc---</option>
+                        <option value="A">Tiệc cưới</option>
+                        <option value="B">Tiệc Sinh nhật</option>
+                        <option value="C">Tiệc Liên quan</option>
+                        <option value="D">Tiệc đầy tháng</option>
+                    </select>
+                    <label for="sl">Số lượng bàn tiệc:</label>
+                    <input type="number" id="sl" name="sl" required placeholder="Nhập số lượng bàn tiệc">
+                    
+                    <label for="menu-package">Chọn gói:</label>
+                    <select id="menu-package" name="menu-package" required>
+                        <option value="0">---Gói---</option>
+                        <option value="A">Gói Simple</option>
+                        <option value="B">Gói Gói tiệc hồng phúc</option>
+                        <option value="C">Gói Thực đơn hoàng gia</option>
+                        <option value="D">Gói Ngọc trai</option>
+                        <option value="E">Gói Đặc biệt</option>
+                        <option value="F">Gói Kim cương</option>
+                    </select>
+        
+                    <label for="message">Ghi chú:</label>
+                    <textarea id="message" name="message" rows="4" ></textarea>
+        
+                    <button type="submit">Xác nhận</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <div id="cart-icon" onclick="toggleCart()">
+        <img src="Images/Icon/grocery-store.png">
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-lienhe">
+                <div><img src="Images/Icon/contact.png" alt="contact">
+                    <p>0123 456 789</p>
+                </div>
+                <div><img src="Images/Icon/location.png" alt="location">
+                    <p>123 đường ABC, quận Ninh Kiều, TP. Cần Thơ</p>
+                </div>
+                <div><img src="Images/Icon/mail.png" alt="mail">
+                    <p>venuspalace@gmail.com</p>
+                </div>
+                <div><img src="Images/Icon/time.png" alt="time">
+                    <p>08:00 - 23-00 (Hàng ngày)</p>
+                </div>
+            </div>
+        <p>© 2025 Venus Palace. All rights reserved.</p>
+        </footer>
+        <script src="JavaScript/tonghop.js"></script>
+</body>
+</html>

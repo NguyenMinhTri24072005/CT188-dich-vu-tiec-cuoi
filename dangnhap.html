@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Logo.ico" type="image/x-icon">
+    <title>Venus Palace</title>
+    <link rel="stylesheet" href="CSS/header_footer.CSS">
+    <link rel="stylesheet" href="CSS/dangnhap.CSS">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="trangchu.html" class="logo"><img src="Images/Logo/Logo.png" alt="Venus Palace"></a>
+            <nav class="nav">
+                <a href="trangchu.html">TRANG CHỦ</a>
+                <a href="gioithieu.html">GIỚI THIỆU</a>
+                <a href="sanpham.html">SẢN PHẨM</a>
+                <a href="giohang.html">GIỎ HÀNG</a>
+                <a href="dangky.html">ĐĂNG KÝ</a>
+                <a href="dangnhap.html">ĐĂNG NHẬP</a>
+                <a href="lienhe.html">LIÊN HỆ</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><img src="Images/Icon/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Images/Icon/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Images/Icon/tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="Images/Icon/messenger.png" alt="Messenger"></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="signin-main">
+        <fieldset class="signin-fieldset">
+            <form class="signin-form" action="" method="post" onsubmit="signin()">
+                <table>
+                    <tr class="username">
+                        <td class="td-username">
+                            <input type="text" id="username" placeholder="Nhập username">
+                        </td>
+                    </tr>
+                    <tr class="Passwords">
+                        <td class="td-password">
+                            <input type="password" id="password" placeholder="Nhập mật khẩu">
+                        </td>
+                    </tr>
+                    <tr class="contract">
+                        <td class="td-contract">
+                            <span>bạn đồng ý với <a href="dieukhoang.html">điều khoản</a> ?</span>
+                            <input type="checkbox" id="contract">
+                        </td>
+                    </tr>
+                    <tr class="dangnhap">
+                        <td class="td-dangnhap">
+                            <input type="submit" id="dangnhap" value="Đăng nhập">
+                        </td>
+                    </tr>
+                    <tr class="have-account">
+                        <td class="td-have-account">
+                            <span>bạn chưa có tài khoản ? <a href="dangky.html">sign up</a></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-lienhe">
+                <div><img src="Images/Icon/contact.png" alt="contact">
+                    <p>0123 456 789</p>
+                </div>
+                <div><img src="Images/Icon/location.png" alt="location">
+                    <p>123 đường ABC, quận Ninh Kiều, TP. Cần Thơ</p>
+                </div>
+                <div><img src="Images/Icon/mail.png" alt="mail">
+                    <p>venuspalace@gmail.com</p>
+                </div>
+                <div><img src="Images/Icon/time.png" alt="time">
+                    <p>08:00 - 23-00 (Hàng ngày)</p>
+                </div>
+            </div>
+            <p>© 2025 Venus Palace. All rights reserved.</p>
+    </footer>
+
+    <div class="popup-button">
+        <a href="#">
+            <img src="Images/Logo/Logo.png" alt="popup">
+        </a>
+    </div>
+    <script src="JavaScript/tonghop.js"></script>
+</body>
+
+</html>
